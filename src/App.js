@@ -30,6 +30,10 @@ flex-direction: column;
 background-color: lightgray;
 background-size: cover;
 border-radius: 10px;
+-webkit-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.63);
+-moz-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.63);
+box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.63);
+
 `;
 
 
