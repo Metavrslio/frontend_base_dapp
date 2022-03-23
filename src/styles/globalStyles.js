@@ -93,9 +93,11 @@ export const StyledBanner = styled.div`
 
 export const StyledFooter = styled.div`
   background-image: url(${img3});
-  height: 300px;
+  height: 400px;
   width: 100%;
-  margin-top: 920px;
+  max-width: 1400px;
+  margin-top: 820px;
+  
   position: absolute;
   background-size: cover;
   
