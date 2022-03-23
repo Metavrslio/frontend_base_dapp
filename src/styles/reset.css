@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Nove";
+  src: url("../MyFontsWebfontsKit/webFonts/Nove/font.woff2") format("woff2"),
+    url("../MyFontsWebfontsKit/webFonts/Nove/font.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body,
 div,
@@ -126,7 +134,7 @@ table {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Nove";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -154,7 +162,7 @@ body {
 }
 
 html {
-  background-color: "#4C4C4C";
+  background-color: "#00000";
 }
 
 div {

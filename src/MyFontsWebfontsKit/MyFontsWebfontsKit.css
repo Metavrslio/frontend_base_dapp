@@ -1,0 +1,28 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4491903, 2022-03-13T14:59:19-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Nove by FSD
+ * URL: https://www.myfonts.com/fonts/fsd/nove/regular/
+ * Copyright: Copyright (c) 2011 by Fabrizio Schiavi. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2022 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/448a7f");
+  
+@font-face {
+  font-family: "Nove";
+  src: url('webFonts/Nove/font.woff2') format('woff2'), url('webFonts/Nove/font.woff') format('woff');
+}
+
