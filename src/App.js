@@ -12,11 +12,15 @@ import { StyledBanner } from "./styles/globalStyles";
 export const StyledButton = styled.button`
   padding: 8px;
   border-radius: 5px;
+  border-style: outset;
   border-width: 1px;
-
+  -webkit-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.63);
+-moz-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.63);
+box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.33);
   &:active {
     background-color: aliceblue;
   }
+  
 `;
 
 export const StyledCard = styled.div`
@@ -27,7 +31,7 @@ justify-content: center;
 align-items: center;
 display: flex;
 flex-direction: column;
-background-color: lightgray;
+background-color: gray;
 background-size: cover;
 border-radius: 10px;
 -webkit-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.63);
@@ -44,6 +48,18 @@ function App() {
   const data = useSelector((state) => state.data);
   const [feedback, setFeedback] = useState("Floor Price: .02 ETH");
   const [claimingNft, setClaimingNft] = useState(false);
+
+  const [count, setCount] = useState(1);
+  const incrementCount = () => { 
+    if(count < 5){
+      setCount(count + 1);
+    }
+  };
+  const decrementCount = () => {
+    if(count > 1){
+      setCount(count - 1);
+    }
+   };
 
   const claimNFTs = (_mintAmount) => {
     setClaimingNft(true);
@@ -90,7 +106,7 @@ function App() {
             <s.TextDescription>{blockchain.errorMsg}</s.TextDescription>
           ) : null}
         </StyledCard>
-        <StyledBanner></StyledBanner>
+        <s.StyledFooter></s.StyledFooter>
         </s.Container>
       ) : (
         
@@ -105,7 +121,7 @@ function App() {
           <s.TextTitle style={{ textAlign: "center" }}>
             Mint an Undead Monster
           </s.TextTitle>
-          
+         
           <s.SpacerXSmall />
           <s.TextDescription style={{ textAlign: "center" }}>{feedback}</s.TextDescription>
           <s.SpacerSmall />
@@ -113,25 +129,26 @@ function App() {
             disabled={claimingNft ? 1 : 0}
             onClick={(e) => {
               e.preventDefault();
-              claimNFTs(1);
+              claimNFTs(count);
             }}
           >
-            {claimingNft ? "Busy Claiming" : "MINT 1"}
+            {claimingNft ? "Claiming" : "MINT"}
           </StyledButton>
           <s.SpacerSmall />
-          <StyledButton
-            disabled={claimingNft ? 1 : 0}
-            onClick={(e) => {
-              e.preventDefault();
-              claimNFTs(5);
-            }}
-          >
-            {claimingNft ? "Busy Claiming" : "MINT 5"}
-          </StyledButton>
+          <s.ButtonContainer>
+            <s.SpacerSmall />
+            <StyledButton onClick={decrementCount}>-</StyledButton>
+          <s.SpacerXSmall />
+          <s.TextDescription>{count}</s.TextDescription>
+          <s.SpacerXSmall />
+          <StyledButton onClick={incrementCount}>+</StyledButton>
+        
           <s.SpacerSmall />
+          </s.ButtonContainer>
           </StyledCard>
           <s.StyledSkele></s.StyledSkele>
-          <s.StyledFooter></s.StyledFooter>
+          
+          
         </s.Container>
         
       )}

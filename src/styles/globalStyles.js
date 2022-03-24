@@ -55,7 +55,7 @@ export const Container = styled.div`
 `;
 
 export const TextTitle = styled.p`
-  color: var(--black);
+  color: var(--white);
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 10px ;
@@ -87,7 +87,7 @@ export const StyledBanner = styled.div`
   height: 250px;
   width: 390px;
   position: absolute;
-  margin-bottom: 800px;
+  margin-bottom: -650px;
   border-style: none;
 `;
 
@@ -117,6 +117,23 @@ export const HeaderText = styled.p`
   color: white;
   font-size: 4rem;
   position: absolute;
-  margin-top: 550px;
+  margin-top: -750px;
   font-family: "Nove";
+`;
+
+export const ButtonContainer = styled.div`
+  width: 100px;
+height: 77px;
+margin-bottom: 50px;
+justify-content: space-between;
+text-align: center;
+align-items: center;
+display: flex;
+flex-direction: row;
+background-color: lightgray;
+background-size: cover;
+border-radius: 10px;
+-webkit-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.63);
+-moz-box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.63);
+box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.63);
 `;
