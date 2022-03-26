@@ -26,7 +26,7 @@ box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.33);
 export const StyledCard = styled.div`
 width: 300px;
 height: 300px;
-margin-bottom: 240px;
+margin-bottom: 100px;
 justify-content: center;
 align-items: center;
 display: flex;

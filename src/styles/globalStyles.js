@@ -96,7 +96,7 @@ export const StyledFooter = styled.div`
   height: 400px;
   width: 100%;
   max-width: 1400px;
-  margin-top: 515px;
+  margin-bottom: -849px;
   
   position: absolute;
   background-size: cover;
