@@ -1,5 +1,5 @@
-const SmartContract = artifacts.require("SmartContract");
+const UMC = artifacts.require("UMC");
 
 module.exports = function (deployer) {
-  deployer.deploy(SmartContract, "Name", "Symbol", "https://", "_initNotRevealedUri");
+  deployer.deploy(UMC, "Name", "Symbol", "http://ipfs.com", "http://ipfs.com", "8888");
 };
